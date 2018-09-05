@@ -5,6 +5,11 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomModule", "CustomModule\CustomModule.csproj", "{BA22061F-4C90-4E1F-9161-94A11F060C7F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildScripts", "BuildScripts", "{D9F55ADC-120B-4508-8E27-15778D5CDD33}"
+	ProjectSection(SolutionItems) = preProject
+		BuildScripts\BuildSnapIn.ps1 = BuildScripts\BuildSnapIn.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
