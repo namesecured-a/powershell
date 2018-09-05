@@ -35,8 +35,8 @@ PROCESS {
 
         $fileName = "$fileName-01$extension"
         $dst = [System.IO.Path]::Combine($directory, $fileName)
-        $expression = "$ffmpeg -i $path -acodec copy -vcodec copy -ss 00:00:00 $dst"
-        # '-c copy' - is shorcut for '-acoded copy -vcodec copy'
+        $expression = "$ffmpeg -i $path -map_metadata 0 -map_metadata:s:v 0:s:v -map_metadata:s:a 0:s:a -acodec copy -vcodec copy -ss 00:00:00 $dst"
+        # '-c copy' - is shorcut for '-acodec copy -vcodec copy'
         # $expression = "$ffmpeg -i $path -c copy -ss 00:00:00 $dst"
         Write-Host $expression
         Invoke-Expression $expression
